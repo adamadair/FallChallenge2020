@@ -10,8 +10,9 @@ public class Fall2020Main {
         gameRunner.setLeagueLevel(1);
 
         //Add players
-        gameRunner.addAgent(BasicAgent.class, "Kotake");
-        gameRunner.addAgent(BasicAgent.class, "Koume");
+        gameRunner.addAgent("mono /home/adam/RiderProjects/cgfc2020/cgfc2020/bin/Debug/cgfc2020.exe", "KodeMonkey");
+        gameRunner.addAgent("mono /home/adam/RiderProjects/cgfc2020/archive/b13.exe W1", "OldKode");
+
 
         //Set game seed
         gameRunner.setSeed(5842184981578562716L);

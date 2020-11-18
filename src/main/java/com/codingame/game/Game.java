@@ -518,17 +518,12 @@ public class Game {
     }
 
     private Optional<Spell> getSpellById(int id) {
-        return Stream.of(
-            deliveries.stream(),
-            tome.stream(),
-            delivered.stream()
-                .map(del -> del.getDelivery()),
-            gameManager.getPlayers().stream()
-                .flatMap(p -> p.getSpells().stream())
-        )
-            .flatMap(Function.identity())
-            .filter(spell -> spell.getId() == id)
-            .findFirst();
+        List<Spell> l = new ArrayList<>();
+        l.addAll(deliveries);
+        l.addAll(tome);
+        l.addAll(delivered.stream().map(DeliveryCompletion::getDelivery).collect(Collectors.toList()));
+        l.addAll(gameManager.getPlayers().stream().flatMap(p -> p.getSpells().stream()).collect(Collectors.toList()));
+        return l.stream().filter(spell -> spell.getId() == id).findFirst();
     }
 
     private void doReset(Player p) throws GameException {
