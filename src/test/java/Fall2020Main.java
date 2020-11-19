@@ -7,11 +7,11 @@ public class Fall2020Main {
         MultiplayerGameRunner gameRunner = new MultiplayerGameRunner();
 
         //Choose league level
-        gameRunner.setLeagueLevel(1);
+        gameRunner.setLeagueLevel(3);
 
         //Add players
         gameRunner.addAgent("mono /home/adam/RiderProjects/cgfc2020/cgfc2020/bin/Debug/cgfc2020.exe", "KodeMonkey");
-        gameRunner.addAgent("mono /home/adam/RiderProjects/cgfc2020/archive/b13.exe W1", "OldKode");
+        gameRunner.addAgent("mono /home/adam/RiderProjects/cgfc2020/archive/b13.exe B", "OldKode");
 
 
         //Set game seed

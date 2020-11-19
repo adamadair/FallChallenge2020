@@ -38,6 +38,7 @@ public class CommandLineInterface {
             }
 
             MultiplayerGameRunner runner = new MultiplayerGameRunner();
+            runner.setLeagueLevel(3);
 
             //Field getGameResult = GameRunner.class.getDeclaredField("gameResult");
             //getGameResult.setAccessible(true);
