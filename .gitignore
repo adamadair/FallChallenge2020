@@ -1,3 +1,4 @@
+/.idea
 .factorypath
 .pydevproject
 /.classpath
@@ -10,3 +11,5 @@ src/main/resources/view/node_modules/
 src/main/resources/view/package-lock.json
 src/main/resources/view/package.json
 src/main/resources/view/tsconfig.json
+dependency-reduced-pom.xml
+fall-2020.iml
